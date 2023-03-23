@@ -1,0 +1,15 @@
+h1, p {
+    text-align: center;
+}
+
+h1:hover, p:hover {
+    background-color: gray;
+}
+
+h1:active, p:active {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+}

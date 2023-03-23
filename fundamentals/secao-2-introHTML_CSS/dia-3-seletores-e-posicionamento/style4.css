@@ -1,0 +1,26 @@
+div:hover {
+    border-style: solid;
+}
+
+.primaria, .primaria h3 {
+    background-color: rgb(255, 0, 55);
+    color: white;
+    font-size: 50px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.secundaria {
+    background-color: rgb(25, 75, 150);
+}
+.complementar h3 {
+    background-color: rgb(168, 142, 23);
+    height: 150px;
+    text-align: center;
+    font-style: italic;
+}
+.escura {
+    background-color: rgb(121, 0, 190);
+}
+.clara {
+    background-color: rgb(131, 192, 192);
+}
