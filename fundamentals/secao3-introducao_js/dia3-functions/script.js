@@ -12,7 +12,7 @@ for (let i = 0; i < array.length; ++i) {
 
 console.log(mensagem)
 
-let numerosImpares = []
+/*let numerosImpares = []
 
 for(let index = 1; index <= 50; ++index) {
     if (index % 2 !== 0) {
@@ -33,4 +33,48 @@ function addValor (quantidade) {
     console.log(saldo)
 }
 
-addValor(10) 
+addValor(10) */
+
+let clientesTrybeBank = ['Ada', 'John', 'Gus'];
+
+/*function removeCliente(cliente) {
+  if (typeof cliente === 'string') {
+    let clienteEncontrado = false;
+    for (let index = 0; index < clientesTrybeBank.length; index += 1) {
+      if (cliente === clientesTrybeBank[index]) {
+        clientesTrybeBank.splice(index, 1);
+        clienteEncontrado = true;
+        return 'Cliente excluída(o) com sucesso.';
+      }
+    }
+
+    if (clienteEncontrado === false) {
+      return 'Cliente não encontrado'
+    }
+  } else {
+    return 'O parâmetro passado deve ser do tipo "string"!';
+  }
+};*/
+
+function verificaString(cliente) {
+    if (typeof cliente === 'string') {
+        removeCliente()
+    }
+}
+
+let clienteEncontrado = false;
+
+function contemCliente(cliente) {
+    for (let index = 0; index < clientesTrybeBank.length; index += 1) {
+      if (cliente === clientesTrybeBank[index]) {
+        clienteEncontrado = true;
+      }
+    }
+}
+
+function removeCliente() {
+    if (clienteEncontrado == true) {
+        clientesTrybeBank.splice(index, 1);
+        return 'Cliente excluída(o) com sucesso.';
+    }
+}
