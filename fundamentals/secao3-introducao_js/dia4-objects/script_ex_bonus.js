@@ -15,13 +15,12 @@ const convertRomans = (string) => {
     M: 1000
   }
 
+  let converted = 0
+
   for (keys in romans) {
-    if (string == keys) {
-      console.log(romans[keys]) 
-    } else if (string[1] || string[0] == keys) {
-      
-    }
+    string == keys ? console.log(romans[keys]) : (string[0] == keys || string[1] == keys) ? converted += romans[keys] : true ;
   }
+  console.log(converted)
 }
 
-convertRomans('V')
+convertRomans('VI')
