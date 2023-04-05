@@ -53,7 +53,7 @@ console.log(`O livro favorito de ${leitor.nome} ${leitor.sobrenome} se chama ${l
 
 console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos.`)*/
 
-let order = {
+/*let order = {
   name: 'Rafael Andrade',
   phoneNumber: '11-98763-1416',
   address: {
@@ -102,4 +102,65 @@ function orderModifier(order) {
   console.log(`Olá, ${order.name}, o valor total do seu pedido de ${Object.keys(order.order.pizza)} e ${order.order.drinks.coke.type} é R$${order.payment.total}`) 
 }
 
-orderModifier(order);
+orderModifier(order);*/
+
+let lesson1 = {
+  materia: 'Matemática',
+  numeroEstudantes: 20,
+  professor: 'Maria Clara',
+  turno: 'manhã',
+};
+
+let lesson2 = {
+  materia: 'História',
+  numeroEstudantes: 20,
+  professor: 'Carlos',
+};
+
+let lesson3 = {
+  materia: 'Matemática',
+  numeroEstudantes: 10,
+  professor: 'Maria Clara',
+  turno: 'noite',
+};
+
+function addTurno(objeto, chave, valor) {
+  objeto[`${chave}`] = valor
+  console.log(lesson2)
+}
+
+addTurno(lesson2, 'turno', 'noite')
+
+function listKeys(objeto) {
+  console.log(Object.keys(objeto))
+}
+
+listKeys(lesson1)
+
+const showSize = (objeto) => {
+  console.log(Object.keys(objeto).length)
+}
+
+showSize(lesson3)
+
+const showValues = (objeto) => {console.log(Object.values(objeto))}
+
+showValues(lesson2)
+
+const allLessons = {}
+
+allLessons.lesson1 = lesson1
+allLessons.lesson2 = lesson2
+allLessons.lesson3 = lesson3
+
+console.log(allLessons)
+
+const showAllStudents = (objeto) => {
+  let estudantes1 = objeto.lesson1.numeroEstudantes
+  let estudantes2 = objeto.lesson2.numeroEstudantes
+  let estudantes3 =  objeto.lesson3.numeroEstudantes
+
+  console.log(`O número total de estudantes é ${estudantes1 + estudantes2 + estudantes3}`)
+}
+
+showAllStudents(allLessons)
