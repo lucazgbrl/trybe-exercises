@@ -164,3 +164,19 @@ const showAllStudents = (objeto) => {
 }
 
 showAllStudents(allLessons)
+
+const showValue = (objeto, index) => {
+  console.log(`${Object.values(objeto)[index]}`)
+}
+
+showValue(lesson1, 0)
+
+const verifyPair = (objeto, chave, valor) => {
+  let result = false
+  for (value in objeto) {
+    (objeto[`${chave}`] == `${valor}`) ? result = true : result = result;
+  }
+  console.log(result)
+}
+
+verifyPair(lesson3, 'materia', 'Maria Clara')
