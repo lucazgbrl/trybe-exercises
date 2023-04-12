@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let newH1 = document.createElement('h1')
+      newH1.className = 'title'
+      newH1.innerText = 'TrybeTrip - Agência de Viagens'
+      document.body.appendChild(newH1)
+
+      let newMain = document.createElement('main')
+      newMain.className = 'main-content'
+      document.body.appendChild(newMain)
+
+      let newSection = document.createElement('section')
+      newSection.className = 'center-content'
+      document.getElementsByClassName('main-content')[0].appendChild(newSection)
+
+      let newP = document.createElement('p')
+      newP.innerText = 'Algum texto aleatório que eu vou escrever depois(talvez)'
+      document.getElementsByClassName('center-content')[0].appendChild(newP)
+
+      let newSectionLeft = document.createElement('section')
+      newSectionLeft.className = 'left-content'
+      document.getElementsByClassName('main-content')[0].appendChild(newSectionLeft)
+
+      let newSectionRight = document.createElement('section')
+      newSectionRight.className = 'right-content'
+      document.getElementsByClassName('main-content')[0].appendChild(newSectionRight)
+
+      let newImg = document.createElement('img')
+      newImg.src = 'https://picsum.photos/200'
+      newImg.className = 'small-image'
+      document.getElementsByClassName('left-content')[0].appendChild(newImg)
+
+      let newList = document.createElement('ul')
+      document.getElementsByClassName('right-content')[0].appendChild(newList)
+
+      let writtenNum = ['um', 'dois','três','quatro','cinco','seis','sete','oito','nove','dez']
+      for (let num of writtenNum) {
+        let itens = document.createElement('li')
+        itens.innerText = num
+        document.getElementsByTagName('ul')[0].appendChild(itens)
+      }
+
+      for(let num = 1; num <= 3; ++num) {
+        let newH3 = document.createElement('h3')
+        newH3.className = 'description'
+        document.getElementsByClassName('main-content')[0].appendChild(newH3)
+      }
+
+      let removeLeft = document.getElementsByClassName('main-content')[0].firstElementChild.nextElementSibling
+      document.getElementsByClassName('main-content')[0].removeChild(removeLeft)
+
+      let centralizeRight = document.getElementsByClassName('main-content')[0].firstElementChild.nextElementSibling
+      centralizeRight.style.marginRight = 'auto'
+
+      let changeColor = document.getElementsByClassName('main-content')[0]
+      changeColor.style.backgroundColor = 'green'
+
+      let removeItens = document.getElementsByTagName('ul')[0].lastChild
+      document.getElementsByTagName('ul')[0].removeChild(removeItens)
+
+      let removeItens2 = document.getElementsByTagName('ul')[0].lastChild
+      document.getElementsByTagName('ul')[0].removeChild(removeItens2)
+      
+    </script>
+  </body>
+</html>
