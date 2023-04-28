@@ -97,12 +97,63 @@ const clients = [
 
 const findPersonByName = (name) => {
   // seu código aqui
+  for (index of clients) {
+    if (index.name === name) {
+      return `Destinatário: ${index.name} Endereço: ${index.address.street}, ${index.address.number}, ${index.address.neighborhood}, ${index.address.city} - ${index.address.state}. CEP: ${index.address.cep} `;
+    }
+  }
+
+  throw new Error('Pessoa não encontrada, tente novamente');
 };
+
+try {
+  findPersonByName();
+} catch (error) {
+  error.message
+}
+
+console.log(findPersonByName('Isabela Almeida'));
 
 const findPersonByPosition = (position) => {
   // seu código aqui
+  for (let index = 0; index < clients.length; index += 1){
+    if (position === index) {
+      return `Cliente: ${clients[index].name}. email: ${clients[index].email}`
+    }
+  }
+
+  throw new Error('Posição inválida, tente novamente');
 };
+
+try {
+  findPersonByPosition();
+} catch (error) {
+  error.message;
+}
+
+console.log(findPersonByPosition(1));
 
 const findPeopleByState = (state) => {
   // seu código aqui
+  arrayMoradores = []
+
+  for (index of clients) {
+    if (index.address.state === state) {
+      arrayMoradores.push(index.name);
+    }
+  }
+
+  if (arrayMoradores.length <= 0) {
+    throw new Error('Ops, nenhuma pessoa mora nesse estado, tente outro');
+  }
+
+  return arrayMoradores;
 };
+
+try {
+  findPeopleByState();
+} catch (error) {
+  error.message;
+}
+
+console.log(findPeopleByState('SC'));
